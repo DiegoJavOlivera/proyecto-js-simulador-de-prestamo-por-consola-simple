@@ -2,21 +2,21 @@
 
 function pagoMinimo(){ 
     let pago = parseInt(prompt("Ingresar monto de prestamo"));
-    while(pago <= 100 ){
+    while(pago <= 1000 ){
         console.log("EL PAGO NO LLEGA AL MONTO MINIMO");
         alert("El PAGO NO LLEGA AL MONTO MINIMO");
         let pago = parseInt(prompt("Ingresar monto de prestamo"));
-    if(pago >= 101 && pago <= 200){
+    if(pago >= 10001 && pago <= 20000){
         console.log("El prestamo llega al monto minimo, PUEDE OBTENERLO");
         alert("El prestamo llega al monto minimo, PUEDE OBTENERLO");
         break
         }
-    else if(pago >= 201 && pago <= 300){
+    else if(pago >= 20001 && pago <= 30000){
         console.log("El prestamo llega al monto medio, PUEDE OBTENERLO");
         alert("El prestamo llega al monto medio, PUEDE OBTENERLO");
         break
         }
-    else if(pago >= 301 && pago <= 100000){
+    else if(pago >= 30001 && pago <= 100000){
         console.log("El prestamo llega al monto maximo, PUEDE OBTENERLO");
         alert("El prestamo llega al monto maximo, PUEDE OBTENERLO");
         break
