@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+i{
+    font-size: 5vh;
+    color: darkblue;
+}
+
+body{
+    background: url(../image/imagenBanco.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 1800px;
+
+    background-attachment: fixed;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.cajaSimulador{
+    background-color: cadetblue;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    text-align: center;
+}
+
+
+.historial{
+    padding: 15px;
+    margin-top: 15px;
+    background-color: cadetblue;
+    display:block;
+    justify-content: center;
+    text-align: center;
+}
+

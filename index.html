@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Simulador de Prestamos</title>
 </head>
 <body>
-    <script src="js/script.js"></script>
+    <header><i class="fa-solid fa-landmark" id="mostrar_historial"></i></header>
+    <main>
+        <h1 class="titulo">Simulador de Prestamos</h1>
+            <div class="cajaSimulador">
+                <form class="formulario">
+                    <h2 class="tituloCantidadCuotas">Ingresar la cantidad de cuotas que desea pagar</h2>
+                    <input type="radio" name="cuotas" id="tres_cuotas">3 cuotas
+                    <input type="radio" name="cuotas" id="6_cuotas">6 cuotas
+                    <input type="radio" name="cuotas" id="12_cuotas">12 cuotas
+                    <br>
+                    <input type="number" name="prestamo" id="cantidad_solicitada">
+                    <input type="button" id="boton_solicitar" value="Solicitar" onclick="solicitar()">
+                </form>
+            </div>
+    </main>
+    
+    <div class="historial">
+        <h3>historial de prestamos</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Cantidad de cuotas</td>
+                    <td>Monto solicitado</td>
+                    <td>Cantidad de interes</td>
+                    <td>Total</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://kit.fontawesome.com/140cf224bf.js" crossorigin="anonymous"></script>
+    <script src=""></script>
 </body>
 </html>

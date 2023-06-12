@@ -69,6 +69,9 @@ function ingreso(){
         alert("El Usuario es menor de edad, ACCESO DENEGADO");
         edad = parseInt(prompt("Ingresar edad"));
     }
+    console.log("El usuario es mayor de edad, puede acceder al credito");
+    alert("El usuario es mayor de edad, puede acceder al credito");
+    
     let nombre = prompt("Ingresar nombre");
     let apellido = prompt("Ingresar apellido");
     let password = prompt("Ingresar password");
@@ -82,10 +85,6 @@ function ingreso(){
     }
     usuario.agregarPrestamo(prestamo);
     console.log(usuario);
-
-    console.log("El usuario es mayor de edad, puede acceder al credito");
-    alert("El usuario es mayor de edad, puede acceder al credito");
-    
 }
 
 ingreso();
