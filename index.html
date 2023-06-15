@@ -8,34 +8,44 @@
     <title>Simulador de Prestamos</title>
 </head>
 <body>
-    <header><i class="fa-solid fa-landmark" id="mostrar_historial"></i></header>
+    <header><button onclick="ocultarContenido()" id="mostrar_historial"><i class="fa-regular fa-folder-open"></i></button></header>
     <main>
         <h1 class="titulo">Simulador de Prestamos</h1>
             <div class="cajaSimulador">
                 <form class="formulario">
                     <h2 class="tituloCantidadCuotas">Ingresar la cantidad de cuotas que desea pagar</h2>
-                    <input type="radio" name="cuotas" id="tres_cuotas">3 cuotas
-                    <input type="radio" name="cuotas" id="6_cuotas">6 cuotas
-                    <input type="radio" name="cuotas" id="12_cuotas">12 cuotas
+                    <input type="radio" name="cuotas" value="3">3 cuotas
+                    <input type="radio" name="cuotas" value="6">6 cuotas
+                    <input type="radio" name="cuotas" value="12">12 cuotas
                     <br>
-                    <input type="number" name="prestamo" id="cantidad_solicitada">
+                    <input type="number" name="prestamo" id="cantidad_solicitada" min ="0" step="1">
                     <input type="button" id="boton_solicitar" value="Solicitar" onclick="solicitar()">
                 </form>
             </div>
     </main>
+
+    <section>
+        <div>
+            <h4>Informacion sobre el prestamo</h4>
+            <p>
+                El simulador presentado es para que el cliente pueda estar informado sobre el monto de interes, monto solicitado y la cantidad de cuotas.
+                Las cuotas del prestamo tienen interes, en 3 cuotas tiene un 5% de recargo, un 10% en 6 y un 20% en 12 cuotas. 
+            </p>
+        </div>
+    </section>
     
-    <div class="historial">
-        <h3>historial de prestamos</h3>
+    <div class="historial" id="historial">
+        <h3>Historial de prestamos</h3>
         
-        <table>
+        <table id="tabla">
             <thead>
                 <tr>
-                    <td></td>
+                    
                     <td>Cantidad de cuotas</td>
                     <td>Monto solicitado</td>
                     <td>Cantidad de interes</td>
                     <td>Total</td>
-                    <td></td>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -44,6 +54,6 @@
         </table>
     </div>
     <script src="https://kit.fontawesome.com/140cf224bf.js" crossorigin="anonymous"></script>
-    <script src=""></script>
+    <script src="js/script1.js"></script>
 </body>
 </html>
