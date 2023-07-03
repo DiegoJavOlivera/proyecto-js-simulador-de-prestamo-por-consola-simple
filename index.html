@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style/style.css">
     <title>Simulador de Prestamos</title>
 </head>
 <body>
+    
     <header><button onclick="ocultarContenido()" id="mostrar_historial"><i class="fa-regular fa-folder-open"></i></button></header>
+    <div id="clima"></div>
     <main>
         <h1 class="titulo">Simulador de Prestamos</h1>
             <div class="cajaSimulador">
                 <form class="formulario">
-                    <h2 class="tituloCantidadCuotas">Ingresar la cantidad de cuotas que desea pagar</h2>
+                    <h2 class="tituloCantidadCuotas">Ingresar la cantidad de cuotas que desea pagar y el monto que solicita</h2>
                     <input type="radio" name="cuotas" value="3">3 cuotas
                     <input type="radio" name="cuotas" value="6">6 cuotas
                     <input type="radio" name="cuotas" value="12">12 cuotas
@@ -53,6 +56,7 @@
             </tbody>
         </table>
     </div>
+    <script src="sweetalert2.all.min.js"></script>
     <script src="https://kit.fontawesome.com/140cf224bf.js" crossorigin="anonymous"></script>
     <script src="js/script1.js"></script>
 </body>

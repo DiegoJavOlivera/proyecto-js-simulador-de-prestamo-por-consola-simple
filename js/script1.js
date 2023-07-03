@@ -34,6 +34,13 @@ function solicitar(){
     }
     cuotas = [...cuotas, prestamo];
     localStorage.setItem('prestamosStorage', JSON.stringify(cuotas));
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Tu solicitud se agrego al historial',
+        showConfirmButton: false,
+        timer: 3000
+    })
     imprimirHTML();
     // cuotas.push(prestamo);
     // console.log(total);
@@ -58,3 +65,23 @@ function limpiarHTML(){
     }
 }
 
+
+function mostrar_posicion(posicion){
+    let lat = posicion.coords.latitude;
+    let long = posicion.coords.longitude;
+    let key = "89ae282607ef8ed1a6e446ae5d4e67e2";
+    
+    fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=metric&lang=es`)
+        .then( Response => Response.json())
+        .then( data =>{
+            const elemento_clima = document.getElementById('clima');
+            elemento_clima.innerHTML = `<div class="box_clima">
+                                            <p class="p_lugar">${data.name}</p>
+                                            <p class="p_temp">Temperatura:${data.main.temp}</p>
+                                        </div>
+            `
+            console.log(data);})
+            
+}
+
+navigator.geolocation.getCurrentPosition(mostrar_posicion);

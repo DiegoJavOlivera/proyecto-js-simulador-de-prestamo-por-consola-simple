@@ -79,6 +79,18 @@ p{
     display: none;
 }
 
+.box_clima{
+    border-radius: 50px;
+    margin: 10px 800px;
+    background-color: black;
+}
+.p_lugar{
+    color: white;
+}
 
-
-
+.p_temp{
+    color: white;
+}
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
