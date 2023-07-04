@@ -84,4 +84,47 @@ function mostrar_posicion(posicion){
             
 }
 
+
+async function mostrar_divisa(){
+
+    const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'd399b3523dmsh820c89b5acf7081p1268a8jsn5689f604ffd4',
+            'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+    fetch(url)
+        .then(respon => respon.json())
+        .then(datos =>{
+            const coin = datos.data.coins[0];
+            const price = parseInt (coin.price);
+            const priceint = price.toFixed(2) 
+            crearParrafohtml(coin.name, priceint);
+        })
+}
+function crearParrafohtml(data, price){
+    const elemento_moneda = document.getElementById('moneda');
+            const p = document.createElement('p');
+            p.classList.add('bitcoin');
+            p.textContent = `Moneda: ${data}`;
+            elemento_moneda.appendChild(p);
+            const pi = document.createElement('p');
+            pi.classList.add('precio_bitcoin');
+            pi.textContent = `Precio: USD ${price}`;
+    elemento_moneda.appendChild(pi);
+
+    console.log(data); 
+}
+mostrar_divisa()
+
 navigator.geolocation.getCurrentPosition(mostrar_posicion);

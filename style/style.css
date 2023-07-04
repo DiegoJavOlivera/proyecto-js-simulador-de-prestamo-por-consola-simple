@@ -73,8 +73,19 @@ p{
     margin-top: 50px;
 }
 
+#moneda{
+    background-color: brown;
+    display: block;
+    margin: 10px 750px;
+    border-radius: 50px;
+}
 
-
+.bitcoin{
+    color: white;
+}
+.precio_bitcoin{
+    color: white;
+}
 .oculto{
     display: none;
 }
@@ -93,4 +104,4 @@ p{
 }
 body {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  }
+}
