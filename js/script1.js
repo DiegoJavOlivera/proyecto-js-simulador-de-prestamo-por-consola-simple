@@ -100,17 +100,17 @@ async function mostrar_divisa(){
         const response = await fetch(url, options);
         const result = await response.json();
         console.log(result);
+        if (result && result.data && result.data.coins && result.data.coins.length > 0) {
+            const coin = result.data.coins[0];
+            const price = parseInt(coin.price);
+            crearParrafohtml(coin.name, price);
+        } else {
+            alert("No se encontraron datos de la moneda")
+            console.log('No se encontraron datos de monedas');
+        }
     } catch (error) {
         console.error(error);
     }
-    fetch(url)
-        .then(respon => respon.json())
-        .then(datos =>{
-            const coin = datos.data.coins[0];
-            const price = parseInt (coin.price);
-            const priceint = price.toFixed(2) 
-            crearParrafohtml(coin.name, priceint);
-        })
 }
 function crearParrafohtml(data, price){
     const elemento_moneda = document.getElementById('moneda');
